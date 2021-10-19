@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>document.write</title>
+    </head>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+        
+        body {
+          background-color: black;
+        }
+        
+        h1 {
+          color: #B026FF;
+          font-family: 'Henny Penny', cursive;
+          position: fixed;
+          top: 31%;
+          left: 32%;
+          font-size: 50px;
+        }
+
+        .b-pink, .b-pink:before {
+         background: linear-gradient(45deg, rgba(231,72,234,1) 0%, rgba(75,26,188,1) 100%);
+        }
+        
+        .button {
+          display: inline-block;
+          position: fixed;
+          left: 41%;
+          top: 47%;
+          border-radius: 3px;
+          text-decoration: none;
+          padding: .5em;
+          margin: .5em;
+          font-size: 2em;
+          font-weight: bold;
+          transition: all .5s;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .button:hover {
+          text-shadow: 0px 0px 0px rgba(255, 255, 255, .75);
+        }
+
+        .button:hover:after {
+          left: 100%;
+          top: 100%;
+          bottom: 100%;
+          right: 100%;
+        }
+
+        .button:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          z-index: -1;
+          border-radius: 5px;
+          transition: all .5s;
+        }
+
+        .button:after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 2px;
+          top: 2px;
+          bottom: 2px;
+          right: 2px;
+          z-index: -1;
+          border-radius: 5px;
+          transition: all .5s;
+        }
+    </style>
+    <body>
+        <h1>Oh? A button?</h1>
+        
+        <input type="button" class="button b-pink" onclick='myBoo();' value="The innocent button"></input>
+    </body>
+    <script>
+       function myBoo() {
+            document.write('<body style = "background-color: black">'+ '<video style = "width: 85%; margin-left: 7%; margin-top: 24px;" src ="https://rr2---sn-npoe7nez.c.drive.google.com/videoplayback?expire=1634672191&ei=_-VuYejhFcWVmvUPjIGvkAs&ip=49.150.74.121&cp=QVRIVkdfUVFXQlhPOkxLSUNTMXcwYlFxSFhWODFzZzJjQXNCeHh3Z25JTzE2T184a2JSMDJHV3Y&id=9feaf929d37ccfa8&itag=18&source=webdrive&requiressl=yes&sc=yes&ttl=transient&susc=dr&driveid=1mkzeceg-R1zmZ--kuJHouxzFUOjpFNyQ&app=explorer&mime=video/mp4&vprv=1&prv=1&dur=16.950&lmt=1634657788212481&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRgIhAO5a-FRrc8RibFqeQy2tbEWTcNXTJdPuxTB746XaJGJAAiEApJ1DJpW3Ca-Vpja2n-4lcZ5cVADZMytOGJaCopFgxm4=&cpn=trpG4aBzAq-SJXm6&c=WEB_EMBEDDED_PLAYER&cver=1.20211017.0.0&redirect_counter=1&cm2rm=sn-npos67l&req_id=2d9e2a0ceb48a3ee&cms_redirect=yes&mh=ZB&mm=34&mn=sn-npoe7nez&ms=ltu&mt=1634657572&mv=m&mvi=2&pl=26&lsparams=mh,mm,mn,ms,mv,mvi,pl,sc&lsig=AG3C_xAwRAIgXryFDj_CjhOktYWECdcpaRDhjY1pFjS86rpFyH-TJJACIErHYVqV1QRUy8iuCi21oZJB_Yo7H7bEIproq73zq2f0" autoplay>');
+            }
+    </script>
+</html>
